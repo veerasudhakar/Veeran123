@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Record with Field Integrity" icon-name="standard:account">
+            <div class="slds-p-around_x-small">
+                <lightning-input label="Name" value={rec.Name} onchange={handleNameChange}></lightning-input>
+                <lightning-input label="phone__c" value={rec.phone__c} onchange={handleIndChange}></lightning-input>
+                <lightning-input type="Email__c" label="Email__c" value={rec.Email__c} onchange={handlePhnChange}></lightning-input><br/>
+                <lightning-record-edit-form object-api-name="Lakshman__c" id="createLakshmanForm" >
+            <lightning-input-field field-name="RamId" variant="label-hidden" onchange={handleRamSelection} required> </lightning-input-field>
+        </lightning-record-edit-form>
+                <lightning-button label="Save" onclick={handleClick}></lightning-button>
+            </div>
+        </lightning-card>
+</template>

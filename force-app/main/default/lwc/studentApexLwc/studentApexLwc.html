@@ -1,0 +1,32 @@
+<template>
+  <lightning-card>
+      <div slot="title">
+        
+      </div>    
+  
+     <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Name" value={getStudentRecord.Name} onchange={nameInpChange}></lightning-input>
+      </p>
+  
+      <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Father_Name__c" value={getStudentRecord.Father_Name__c} onchange={fathernameInpChange}></lightning-input>
+      </p>
+  
+      <p class="slds-p-horizontal_small">
+        <lightning-input type="date" label="DOB__c" value={getStudentRecord.DOB__c} onchange={dobInpChange}></lightning-input>
+       </p>
+   
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="date" label="School_Joined_Date__c" value={getStudentRecord.School_Joined_Date__c} onchange={schooljoinInpChange}></lightning-input>
+       </p>
+         
+  
+    
+       
+     <div slot="footer">
+       <lightning-button label="Submit" onclick={saveStudentAction} variant="brand"></lightning-button>
+     </div>
+   
+  
+   </lightning-card>
+</template>

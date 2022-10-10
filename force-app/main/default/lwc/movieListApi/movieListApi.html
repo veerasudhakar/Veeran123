@@ -1,0 +1,22 @@
+<template>
+   <lightning-card title="Search Movie Details">
+
+    <div class="slds-var-m-around_large">
+        <lightning-layout vertical-align="end">
+            <lightning-layout-item flexibility="grow">
+                <lightning-input label="Enter Movie Name" type="search" value={searchMovieName} onchange={handlesearchMovieName}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-left_small">
+                <lightning-button label="Search" variant="brand" onclick={searchMovie}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+   </lightning-card>
+   <div style="height:500px;">
+    <template if:true={movieList}>
+        <lightning-datatable key-field="id"
+        data={movieList}
+        columns={columns}></lightning-datatable>
+    </template>
+   </div>
+  </template>
